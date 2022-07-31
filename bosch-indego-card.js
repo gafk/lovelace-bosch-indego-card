@@ -235,9 +235,9 @@
 
         find_entities(entityName) {
 
-            const indegoSensorBegin = /^sensor.\D{2,}_\d{9}_/;
-            const serialNumRegex = /_\d{9}_/;
-            const indegoEntityIdentRegex = /^sensor.\D{2,}_/;
+            const indegoSensorBegin = /^sensor.[A-Za-z]+_[A-Za-z]+_/;
+//            const serialNumRegex = /_\d{9}_/;
+//            const indegoEntityIdentRegex = /^sensor.\D{2,}_/;
 
             INDEGO_SENSOR_START = entityName.match(indegoSensorBegin);
             if (INDEGO_SENSOR_START != null) {
@@ -246,19 +246,19 @@
                 throw new Error("INDEGO-CARD : Can't find the sensor name in entity.");
             }
 
-            INDEGO_SERIAL = entityName.match(serialNumRegex);
-            if (INDEGO_SERIAL != null) {
-                INDEGO_SERIAL = INDEGO_SERIAL[0].substring(1 , 10);
-            }  else {
-                throw new Error("INDEGO-CARD : Can't find a valid serial number in entity.");
-            }
+//            INDEGO_SERIAL = entityName.match(serialNumRegex);
+//            if (INDEGO_SERIAL != null) {
+//                INDEGO_SERIAL = INDEGO_SERIAL[0].substring(1 , 10);
+//            }  else {
+//                throw new Error("INDEGO-CARD : Can't find a valid serial number in entity.");
+//            }
 
-            INDEGO_IDENT = entityName.match(indegoEntityIdentRegex);
-            if (INDEGO_IDENT != null) {
-                INDEGO_IDENT = INDEGO_IDENT[0].substring(7 , INDEGO_IDENT[0].length-1);
-            }  else {
-                throw new Error("INDEGO-CARD : Can't find a valid indego identifier in entity.");
-            }
+//            INDEGO_IDENT = entityName.match(indegoEntityIdentRegex);
+//            if (INDEGO_IDENT != null) {
+//                INDEGO_IDENT = INDEGO_IDENT[0].substring(7 , INDEGO_IDENT[0].length-1);
+//            }  else {
+//                throw new Error("INDEGO-CARD : Can't find a valid indego identifier in entity.");
+//            }
 
             // States loop
             Object.keys(this.config.state).forEach(key => {
