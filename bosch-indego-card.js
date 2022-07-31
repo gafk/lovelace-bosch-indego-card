@@ -217,9 +217,8 @@
             return data && data.show !== false
                 ? html`<ha-icon-button
                     @click="${() => this.callService(data.service, data.service_data)}"
-                    icon="${data.icon}"
                     title="${data.label || ''}"
-                    style="${this.config.styles.icon}${this.config.styles.button}"></ha-icon-button>`
+                    style="${this.config.styles.icon}${this.config.styles.button}"><ha-icon icon="${data.icon}"></ha-icon></ha-icon-button>`
                 : null;
         }
 
