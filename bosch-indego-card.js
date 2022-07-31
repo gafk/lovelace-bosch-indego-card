@@ -7,8 +7,8 @@
     );
 
     var INDEGO_SENSOR_START = "";
-    var INDEGO_SERIAL = "";
-    var INDEGO_IDENT = "";
+//    var INDEGO_SERIAL = "";
+//    var INDEGO_IDENT = "";
     const UNKNOWN = "unknown";
     const INDEGO_SERVICE = "indego.command";
     
@@ -27,7 +27,7 @@
             icon: 'mdi:battery-charging-80',
         },
         lawn_mowed: {
-            entity_suffix: "lawm_mowed",
+            entity_suffix: "lawn_mowed",
             entity: '',
             key: 'lawn_mowed',
             unit: '%',
@@ -40,14 +40,14 @@
             entity_suffix: "mowing_mode",
             entity: '',
             key: 'mow_mode',
-            label: 'Mow Mode: ',
+            label: 'Mähmodus: ',
             unit: '',
         },
         next_mow: {
             entity_suffix: "next_mow",
             entity: '',
             key: 'next_mow',
-            label: 'Next Mow: ',
+            label: 'Nächstes Mähen: ',
             unit: ' ',
             isDate: true
         },
@@ -55,7 +55,7 @@
             entity_suffix: "last_completed",
             entity: '',
             key: 'last_completed',
-            label: 'Last mow completed: ',
+            label: 'Letztes Mähen: ',
             unit: ' ago',
             isDate: true
         },
@@ -63,7 +63,7 @@
             entity_suffix: "runtime_total",
             entity: '',
             key: 'mowtime_total',
-            label: 'MowTime total: ',
+            label: 'Mähzeit total: ',
             unit: ' h',
         },
     };
@@ -236,6 +236,7 @@
         find_entities(entityName) {
 
             const indegoSensorBegin = /^sensor.[A-Za-z]+_[A-Za-z]+_/;
+//            const indegoSensorBegin = /^sensor.\D{2,}_\d{9}_/;
 //            const serialNumRegex = /_\d{9}_/;
 //            const indegoEntityIdentRegex = /^sensor.\D{2,}_/;
 
