@@ -59,13 +59,6 @@
             unit: ' ago',
             isDate: true
         },
-        mowtime_total: {
-            entity_suffix: "runtime_total",
-            entity: '',
-            key: 'mowtime_total',
-            label: 'Mähzeit total: ',
-            unit: ' h',
-        },
     };
 
     const buttons = {
@@ -120,9 +113,10 @@
   background-size: cover;
 }
 .title {
-  font-size: 20px;
-  padding: 12px 16px 8px;
-  text-align: center;
+  font-size: 110%;
+  padding-top: 10px;
+  padding-left: 70px;
+  text-align: left;
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden;
@@ -140,18 +134,15 @@
 .grid-content {
   display: grid;
   align-content: space-between;
-  grid-row-gap: 6px;
+  grid-row-gap: 8px;
 }
 .grid-left {
   text-align: left;
-  font-size: 110%;
-  padding-left: 10px;
-  border-left: 2px solid var(--primary-color);
+  padding-left: 20px;
 }
 .grid-right {
   text-align: right;
-  padding-right: 10px;
-  border-right: 2px solid var(--primary-color);
+  padding-right: 20px;
 }`;
         }
 
